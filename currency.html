@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kantot</title>
+    <img src="https://monitorfx.pl/wp-content/uploads/2016/05/waluty-%C5%9Bwiata.jpg.webp" alt="CURRENCY" title="EXCHANGE">
+</head>
+<body>
+<form method="POST" action="{{ url_for('currency') }}">
+    <label>Wybierz walutę, którą chcesz kupić:</label>
+    <select name="currency_to">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+    </select>
+    <br>
+    <label>Podaj ilość:</label>
+    <input type="number" name="amount" min="0">
+    <br>
+    <label>Wybierz walutę, którą chcesz zapłacić:</label>
+    <select name="currency_from">
+        <option value="PLN">PLN</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Oblicz koszt">
+</form>
+</body>
+</html>
